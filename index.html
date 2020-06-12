@@ -5,28 +5,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Coding Quiz Challenge</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="resetPasswordBox()">
+    <body>
+        <div class="highscore">High Score
+            <div class="timer"></div>
+        </div>           
         <div class="container" width=400px>
             <header>
                 <h1>Coding Quiz Challenge</h1>
+                <h2></h2>
             </header>
             <div class="card" width=200px>
-                <div class="card-header">
-                <h2></h2>
-                </div>
                 <div class="card-body">
+                    <ul id="list"></ul>
                     <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
                 </div>
                 <div class="card-footer">
-                    <button id="generate" class="btn">Start Quiz</button>
+                    <button id="startQuiz" class="btn-dark startQuiz">Start Quiz</button>
+                    <button id="button1" class="btn btn-dark answerButtons"></button><br></br>
+                    <button id="button2" class="btn btn-dark answerButtons"></button><br></br>
+                    <button id="button3" class="btn btn-dark answerButtons"></button><br></br>
+                    <button id="button4" class="btn btn-dark answerButtons"></button>
+                    <button id="goback" class="btn-dark highscorebuttons">Go Back
+                        <button id="clearscores" class="btn-dark highscorebuttons">Clear Scores</button>
+                    </button>
+                    <hero></hero>
+                    <div class="correct">Correct!</div>
+                    <div class="wrong">Wrong!</div>
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+		 integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+         crossorigin="anonymous">
+        </script>
         <script src="script.js"></script>
-        <!--
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        -->
     </body>
 </html>

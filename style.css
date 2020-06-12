@@ -1,16 +1,88 @@
 body{
-    margin-top: 200px;
 }
 
 .btn{
-    align-items: left;
+    background-color: purple;
+}    
+
+.answerButtons{
+    justify-content: left;
+    display: none;
 }
 
 .card{
     text-align: center;
+    border: none;
+    padding: none;
+}
+
+.card-footer{
+    background-color: white;
+    border: none;
+}
+
+#clearscores{
+    justify-content: left;
+}
+
+.container{
+    margin-top: 200px;
+    width: 590px;
+}
+
+.correct{
+    display: none;
+    border-top: 2px gray;
+}
+
+form{
+}
+
+#goback{
+    align-content: left;
 }
 
 h1{
     font-size: 28px;
     text-align: center;
+}
+
+header{
+}
+
+.highscore,.timer{
+    display: inline;
+}
+
+.highscore{
+    display: flex;
+    justify-content: space-between;
+}
+
+.highscorebuttons{
+    display: none;
+    justify-content: left;
+}
+
+#inputIdentifier{
+    display: none;
+}
+
+#submitButton{
+    display: none;
+}
+
+li{
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.timer{
+}
+
+.wrong{
+    display: none;
 }
