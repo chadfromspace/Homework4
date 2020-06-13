@@ -35,14 +35,11 @@ $(document).ready(function(){
     ["1. JavaScript","2. Terminal / Bash","3. For Loops","4. Console.log"],
     []
     ];
-    scoreArray.push(localStorage.getItem("highscore"));
-    if(scoreArray[0]!=null){
+        scoreArray.push(localStorage.getItem("highscore"));
         var scoreArraySplit = scoreArray[0].split(",");
-        scoreArray = [];
         for(i=1;i<scoreArraySplit.length;i++){
             scoreArray.push(scoreArraySplit[i]);
         }
-    }
     //Answer buttons function
     $(".answerButtons").on("click",
         function(event){
