@@ -1,4 +1,5 @@
-body{
+.answerResponse{
+    padding-top: 50px;
 }
 
 .btn{
@@ -26,7 +27,7 @@ body{
 }
 
 .container{
-    margin-top: 200px;
+    margin-top: 150px;
     width: 590px;
 }
 
@@ -36,10 +37,13 @@ body{
 }
 
 form{
+    display: flex;
+    text-align: left;
 }
 
 #goback{
     align-content: left;
+    margin-right: 15px;
 }
 
 h1{
@@ -47,16 +51,22 @@ h1{
     text-align: center;
 }
 
-header{
-}
-
-.highscore,.timer{
+.highscore,.timer{    
     display: inline;
 }
 
 .highscore{
+    font-size: 27px;
+    font-weight: bolder;
     display: flex;
     justify-content: space-between;
+    background-color: white;
+}
+
+.highscores{
+    text-align: center;
+    background-color: purple;
+    color: white;
 }
 
 .highscorebuttons{
@@ -64,23 +74,21 @@ header{
     justify-content: left;
 }
 
-#inputIdentifier{
-    display: none;
-}
-
-#submitButton{
-    display: none;
-}
-
 li{
     text-align: left;
 }
 
-ul{
-    list-style-type: none;
+.timer{
+    font-weight: bolder;
+    color: red;
+    font-size: 80px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: right;
 }
 
-.timer{
+ul{
+    list-style-type: none;
 }
 
 .wrong{
