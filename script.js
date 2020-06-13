@@ -36,10 +36,12 @@ $(document).ready(function(){
     []
     ];
     scoreArray.push(localStorage.getItem("highscore"));
-    var scoreArraySplit = scoreArray[0].split(",");
-    scoreArray = [];
-    for(i=1;i<scoreArraySplit.length;i++){
-        scoreArray.push(scoreArraySplit[i]);
+    if(scoreArray[0]!=null){
+        var scoreArraySplit = scoreArray[0].split(",");
+        scoreArray = [];
+        for(i=1;i<scoreArraySplit.length;i++){
+            scoreArray.push(scoreArraySplit[i]);
+        }
     }
     //Answer buttons function
     $(".answerButtons").on("click",
