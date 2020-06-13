@@ -151,11 +151,10 @@ $(document).ready(function(){
         $(highscoreButtons).css({"display":"inline","text-align":"left"});
         $("H2").html("");
         h1Selector.html("High Scores");
-        for(i=0;i<scoreArray.length;i++){
+        for(i=1;i<scoreArray.length;i++){
             var newScore = document.createElement("div");                    
             $(newScore).addClass("highscores");
-            x=i+1;
-            newScore.innerHTML = x+". "+scoreArray[i];
+            newScore.innerHTML = i+". "+scoreArray[i];
             $(".card-body").append(newScore);
         }
     }
