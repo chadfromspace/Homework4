@@ -35,12 +35,9 @@ $(document).ready(function(){
     ["1. JavaScript","2. Terminal / Bash","3. For Loops","4. Console.log"],
     []
     ];
-        scoreArray.push(localStorage.getItem("highscore"));
-        var scoreArraySplit = scoreArray[0].split(",");
-        for(i=1;i<scoreArraySplit.length;i++){
-            scoreArray.push(scoreArraySplit[i]);
-        }
-    //Answer buttons function
+    scoreArray.push(localStorage.getItem("highscore"))
+    var scoreArraySplit = scoreArray[0].split(",");
+        //Answer buttons function
     $(".answerButtons").on("click",
         function(event){
             score = timer.innerHTML;
@@ -148,10 +145,10 @@ $(document).ready(function(){
         $(highscoreButtons).css({"display":"inline","text-align":"left"});
         $("H2").html("");
         h1Selector.html("High Scores");
-        for(i=1;i<scoreArray.length;i++){
+        for(i=1;i<scoreArraySplit.length;i++){
             var newScore = document.createElement("div");                    
             $(newScore).addClass("highscores");
-            newScore.innerHTML = i+". "+scoreArray[i];
+            newScore.innerHTML = i+". "+scoreArraySplit[i];
             $(".card-body").append(newScore);
         }
     }
