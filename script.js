@@ -20,6 +20,7 @@ $(document).ready(function(){
     var elapsedTime = 0;
     var timerInterval;
     var scoreArray = [];
+    var scoreArraySplit = [];
     //Arrays to keep track of the questions and answers.
     var questionArray = ["Commonly used data types <strong>DO NOT</strong> include:",
     "The condition in an if / else statement is enclosed within_____.",
@@ -35,9 +36,11 @@ $(document).ready(function(){
     ["1. JavaScript","2. Terminal / Bash","3. For Loops","4. Console.log"],
     []
     ];
-    scoreArray.push(localStorage.getItem("highscore"))
+    if(localStorage.getItem("highscore")){
+    scoreArray.push(localStorage.getItem("highscore"));
     var scoreArraySplit = scoreArray[0].split(",");
-        //Answer buttons function
+    }
+   //Answer buttons function
     $(".answerButtons").on("click",
         function(event){
             score = timer.innerHTML;
@@ -129,8 +132,8 @@ $(document).ready(function(){
         newForm.append(newInputBox);
         newForm.append(newSubmitButton);
         $(newForm).on("submit", function(event){
-            scoreArray.push(newInputBox.value+" - "+score);
-            localStorage.setItem("highscore",scoreArray);
+            scoreArraySplit.push(newInputBox.value+" - "+score);
+            localStorage.setItem("highscore",scoreArraySplit);
             newInputBox.remove();
             newSubmitButton.remove();
             viewHighscores();
@@ -145,10 +148,11 @@ $(document).ready(function(){
         $(highscoreButtons).css({"display":"inline","text-align":"left"});
         $("H2").html("");
         h1Selector.html("High Scores");
-        for(i=1;i<scoreArraySplit.length;i++){
+        for(i=0;i<scoreArraySplit.length;i++){
             var newScore = document.createElement("div");                    
             $(newScore).addClass("highscores");
-            newScore.innerHTML = i+". "+scoreArraySplit[i];
+            var x = i+1
+            newScore.innerHTML = x+". "+scoreArraySplit[i];
             $(".card-body").append(newScore);
         }
     }
